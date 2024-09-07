@@ -1,0 +1,106 @@
+{
+    "Process Description": {
+      "Description": "The Accounts Receivable (AR) process involves managing and collecting payments from customers for goods or services provided. This process ensures timely collection of payments to maintain cash flow and financial stability."
+    },
+    "Process Steps": [
+      {
+        "Step": "Invoice Creation and Delivery",
+        "Description": "Generate and send invoices to customers for goods or services rendered.",
+        "Sub-Steps": [
+          "Generate the invoice based on sales orders or contracts.",
+          "Verify the accuracy of the invoice details (e.g. customer information, amount, terms).",
+          "Deliver the invoice to the customer via email or postal service."
+        ],
+        "Cycle Time": "1 day"
+      },
+      {
+        "Step": "Payment Receipt",
+        "Description": "Record and verify payments received from customers.",
+        "Sub-Steps": [
+          "Log payments received via check, electronic funds transfer (EFT), or other methods.",
+          "Match payments with corresponding invoices.",
+          "Resolve discrepancies with customers if payment amounts differ from invoice amounts."
+        ],
+        "Cycle Time": "2 days"
+      },
+      {
+        "Step": "Payment Posting",
+        "Description": "Post received payments to the customer’s account in the financial system.",
+        "Sub-Steps": [
+          "Enter payment details into the accounts receivable system.",
+          "Apply payments to the correct customer accounts and invoices.",
+          "Update the customer’s account balance."
+        ],
+        "Cycle Time": "1 day"
+      },
+      {
+        "Step": "Collections Management",
+        "Description": "Manage overdue accounts and pursue collections.",
+        "Sub-Steps": [
+          "Identify overdue accounts based on payment terms.",
+          "Send reminders and follow-up communications to customers.",
+          "Negotiate payment plans or settlements if necessary.",
+          "Escalate to collections agencies or legal action for uncollectible accounts."
+        ],
+        "Cycle Time": "5 days"
+      },
+      {
+        "Step": "Reporting and Reconciliation",
+        "Description": "Generate reports and reconcile accounts for accurate financial records.",
+        "Sub-Steps": [
+          "Prepare aging reports to monitor outstanding receivables.",
+          "Reconcile accounts receivable ledger with the general ledger.",
+          "Generate financial reports for management review.",
+          "Ensure compliance with financial regulations and policies."
+        ],
+        "Cycle Time": "3 days"
+      }
+    ],
+    "Process Cycle Time": {
+      "Definition": "The total time taken from issuing an invoice to receiving full payment.",
+      "Current Cycle Time": "30 days",
+      "Target Cycle Time": "25 days"
+    },
+    "Process KPIs": [
+      {
+        "KPI": "Days Sales Outstanding (DSO)",
+        "Definition": "Average number of days it takes to collect payment after a sale.",
+        "Current Value": "35 days",
+        "Target Value": "30 days"
+      },
+      {
+        "KPI": "Collection Rate",
+        "Definition": "Percentage of invoices collected within the payment terms.",
+        "Current Value": "90%",
+        "Target Value": "95%"
+      },
+      {
+        "KPI": "Bad Debt Ratio",
+        "Definition": "Percentage of receivables deemed uncollectible.",
+        "Current Value": "3%",
+        "Target Value": "1.5%"
+      }
+    ],
+    "Process Owners": [
+      {
+        "Step": "Invoice Creation and Delivery",
+        "Owner": "Mark Davis, Billing Specialist"
+      },
+      {
+        "Step": "Payment Receipt",
+        "Owner": "Laura Lee, Accounts Receivable Clerk"
+      },
+      {
+        "Step": "Payment Posting",
+        "Owner": "Kevin Brown, Accounts Receivable Supervisor"
+      },
+      {
+        "Step": "Collections Management",
+        "Owner": "Angela Green, Collections Manager"
+      },
+      {
+        "Step": "Reporting and Reconciliation",
+        "Owner": "Robert Smith, Financial Analyst"
+      }
+    ]
+  }
