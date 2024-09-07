@@ -1,0 +1,61 @@
+@import '../styles/breakpoints';
+
+.login-button {
+  background-color: #fcd34d; 
+  color: #333333;
+  margin-left: 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: none;
+
+  &:hover {
+    background-color: #fbbf24; 
+  }
+
+  @include respond-to(mobile) {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  @include respond-to(tablet) {
+    font-size: 14px;
+    padding: 7px 15px;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+.dialog-title {
+  background-color: #538499;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 20px 20px 0 0; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dialog-content {
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dialog-actions {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    font-weight: bold;
+    border-radius: 25px;
+    font-size: 1.2rem;
+  }
+}
+
+.circular-progress {
+  margin-left: 10px;
+}

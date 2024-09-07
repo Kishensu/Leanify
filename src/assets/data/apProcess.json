@@ -1,0 +1,108 @@
+{
+    "Process Description": {
+        "Description": "The Accounts Payable (AP) process involves receiving, verifying, approving, and paying supplier invoices. This process ensures that payments are made accurately and on time while maintaining good relationships with suppliers and optimizing cash flow management."
+    },
+    "Process Steps": [
+        {
+            "Step": "Invoice Receipt",
+            "Description": "Invoices are received from suppliers either via email or physical mail.",
+            "Sub-Steps": [
+                "Log the received invoice in the invoice tracking system.",
+                "Digitize physical invoices using a scanner."
+            ],
+            "Cycle Time": "1 day"
+        },
+        {
+            "Step": "Invoice Verification",
+            "Description": "Invoices are matched against purchase orders (PO) and receiving reports to ensure accuracy.",
+            "Sub-Steps": [
+                "Verify that the invoice details match the corresponding PO and receiving report.",
+                "Check for discrepancies and resolve any issues with the supplier or internal departments."
+            ],
+            "Cycle Time": "3 days"
+        },
+        {
+            "Step": "Invoice Approval",
+            "Description": "Invoices are routed for approval based on the organization\u2019s approval matrix.",
+            "Sub-Steps": [
+                "Route the invoice to the appropriate approver(s) based on the invoice amount and department.",
+                "Approvers review and approve or reject the invoice.",
+                "Return rejected invoices to the originator for correction."
+            ],
+            "Cycle Time": "2 days"
+        },
+        {
+            "Step": "Payment Processing",
+            "Description": "Approved invoices are entered into the financial system for payment processing.",
+            "Sub-Steps": [
+                "Enter invoice details into the accounts payable system.",
+                "Schedule payments according to payment terms.",
+                "Process payments via electronic funds transfer (EFT), check, or other methods."
+            ],
+            "Cycle Time": "2 days"
+        },
+        {
+            "Step": "Record Keeping",
+            "Description": "Maintain records of processed invoices and payments for auditing and reference.",
+            "Sub-Steps": [
+                "Store digital copies of invoices and payment records in a secure system.",
+                "Ensure compliance with record retention policies."
+            ],
+            "Cycle Time": "2 days"
+        }
+    ],
+    "Process Cycle Time": {
+        "Definition": "The total time taken from the receipt of an invoice to the completion of the payment.",
+        "Current Cycle Time": "10 days",
+        "Target Cycle Time": "7 days"
+    },
+    "Process KPIs": [
+        {
+            "KPI": "Invoice Processing Time",
+            "Definition": "Average time taken to process an invoice from receipt to payment.",
+            "Current Value": "10 days",
+            "Target Value": "7 days"
+        },
+        {
+            "KPI": "Invoice Error Rate",
+            "Definition": "Percentage of invoices with errors (e.g. mismatches, missing information).",
+            "Current Value": "5%",
+            "Target Value": "2.5%"
+        },
+        {
+            "KPI": "Processing Cost per Invoice",
+            "Definition": "Total cost incurred to process a single invoice.",
+            "Current Value": "15",
+            "Target Value": "12"
+        },
+        {
+            "KPI": "On-Time Payment Rate",
+            "Definition": "Percentage of invoices paid on or before the due date.",
+            "Current Value": "85%",
+            "Target Value": "95%"
+        }
+    ],
+    "Process Owners": [
+        {
+            "Step": "Invoice Receipt",
+            "Owner": "Jane Doe, Accounts Payable Clerk"
+        },
+        {
+            "Step": "Invoice Verification",
+            "Owner": "John Smith, Accounts Payable Supervisor"
+        },
+        {
+            "Step": "Invoice Approval",
+            "Owner": "Sarah Brown, Finance Manager"
+            
+        },
+        {
+            "Step": "Payment Processing",
+            "Owner": "Michael Johnson, Finance Director"
+        },
+        {
+            "Step": "Record Keeping",
+            "Owner": "Emily White, Compliance Officer"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+[
+    {
+      "KPI": "Projects Completed",
+      "Value": 25
+    },
+    {
+      "KPI": "Overall Time Saved (hours)",
+      "Value": 1500
+    },
+    {
+      "KPI": "Costs Reduced ($)",
+      "Value": 50000
+    },
+    {
+      "KPI": "Productivity Increased (%)",
+      "Value": 20
+    },
+    {
+      "KPI": "Customer Satisfaction (%)",
+      "Value": 85
+    },
+    {
+      "KPI": "Return Rate (%)",
+      "Value": 9.7
+    }
+  ]
