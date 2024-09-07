@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+Leanify - Process Improvement Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Leanify is a platform designed to promote a continuous improvement culture within organizations using Lean Six Sigma methodologies. With an interactive dashboard, repository, and AI-assisted chatbot for process queries, Leanify helps streamline processes and foster efficiency across teams.
 
-## Available Scripts
+Table of Contents
 
-In the project directory, you can run:
+Features
+Technologies Used
+Architecture Overview
+Data Flow Diagram
+Installation
+Usage
+API Endpoints
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Process Dashboard: View detailed metrics, KPIs, and cycle time for different processes.
+Process Repository: Access stored processes, steps, and owners.
+Process Form: Submit new processes, including steps, KPIs, and cycle time.
+AI-powered Process Chatbot: Ask queries related to processes stored in the database; the chatbot replies based on embeddings and contextual relevance.
+Authentication System: Secure login and registration using JWT and bcrypt for password encryption.
+Responsive Design: Fully responsive UI with separate mobile-friendly navigation.
 
-### `npm test`
+Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Frontend: React, Material-UI (for UI components), SCSS (for styling)
+Backend: Node.js, Express, Passport.js (for authentication)
+Database: SingleStore (for process data storage and embeddings)
+AI Integration: OpenAI API (for embedding generation and chat completions)
+Charts: Recharts (for visualizing process metrics)
 
-### `npm run build`
+Architecture Overview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Frontend: Built using React with Material-UI, the user interacts with various components such as the Process Dashboard, Process Repository, Process Form, and Chatbot.
+Backend: An Express server handling user authentication, process submission, and AI-driven chatbot responses. It interfaces with SingleStore for storing and retrieving process data and embeddings.
+Database: SingleStore is used to store process information (description, steps, KPIs) and embeddings for contextual query matching.
+AI Integration: OpenAI’s APIs are used to generate text embeddings and provide chat responses based on user queries.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Prerequisites
 
-### `npm run eject`
+Node.js
+SingleStore (for database)
+OpenAI API Key
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone the Repository
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install Dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Configure Environment Variables
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a .env file in the root directory with the following variables:
+PORT=5001
+SINGLESTORE_HOST=your-single-store-host
+SINGLESTORE_USER=your-username
+SINGLESTORE_PASSWORD=your-password
+SINGLESTORE_DATABASE=LeanifyDB
+JWT_SECRET=your-jwt-secret
+OPENAI_API_KEY=your-openai-api-key
 
-## Learn More
+Start the Server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Authentication: Register or login with an account.
+Process Dashboard: View various processes, cycle times, and KPIs.
+Submit Process: Use the form to add new processes, steps, owners, and KPIs.
+AI Chatbot: Interact with the chatbot to get process-specific information using natural language queries.
 
-### Code Splitting
+API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Authentication
 
-### Analyzing the Bundle Size
+POST /api/auth/register: Register a new user.
+POST /api/auth/login: Login to the platform.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Processes
 
-### Making a Progressive Web App
+POST /api/processes: Submit a new process.
+GET /api/processes: Fetch all processes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Chat
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+POST /api/chat: Ask a query; the chatbot provides a response based on the process data.
